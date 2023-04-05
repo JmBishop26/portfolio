@@ -1,0 +1,120 @@
+@import "../globals/globals";
+
+@keyframes vibrate {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-5px, 5px); }
+    50% { transform: translate(0, 0); }
+    75% { transform: translate(5px, -5px); }
+    100% { transform: translate(0, 0); }
+  }
+
+.heroSectionCont{
+    display: flex !important;
+    height: 100vh;
+    background: $navbar-bg;
+    align-items: center !important;
+    margin: -6rem 0 0;
+    flex-wrap: wrap !important;
+    grid-gap: 1rem !important;
+    gap: 1rem !important;
+
+    .heroSection{
+
+        background-color: $navbar-bg;
+        display: flex;
+        max-width: 1200px;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+
+        .heroPicCont{
+            .heroPic{
+                width: 100%;
+                height: auto;
+                // transition: all 0.2s ease-in-out;
+                &:hover{
+                    animation: vibrate 0.5s linear infinite;
+                }
+            }
+            
+        }
+
+        .intro{
+            min-width: 70%;
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+            .introBox{
+                .introName{
+                    font-family: $font;
+                    color: $text-color;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    span{
+                        color: $accent;
+                    }
+                }
+                
+            }
+            .introTitleBox{
+                margin-bottom: 2rem;
+                .introTitle{
+                    font-family: $font;
+                    color: $text-color;
+                    font-size: 4.5rem;
+                    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+                    span{
+                        color: $accent;
+                    }
+                }
+            }
+            .introLinksBox{
+                display: inline-flex;
+                align-items: center;    
+                .myLinks{
+                    background: $bg-color-2;
+                    color: $white;
+                    font-size: 1.5rem;
+                    padding: 1.3rem;
+                    border-radius: 50%;
+                    margin-right: 0.8rem;
+                    display: inline-flex;
+                    align-items: center;
+                    transition: all .2s ease-in-out;
+                    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+                }
+                .myLinks:hover{
+                    transform: translateY(-2px) scale(1.1);
+                }
+
+                .myProject{
+                    font-family: $font;
+                    background: $accent;
+                    padding: 0.8rem 2.5rem;
+                    color: $white;
+                    font-weight: 600;
+                    border-radius: 6px;
+                    margin-right: 1rem;
+                    font-size: 1.2rem;
+                    display: inline-flex;
+                    align-items: center;
+                    transition: all .2s ease-in-out;
+                    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+                }
+                .myProject:hover{
+                    transform: translateY(-2px) scale(1.1);
+                }
+            }
+        }
+
+        .intro>*{
+            flex: 1 1 0%;
+        }
+
+    }
+
+}
+
+// .heroPicCont{
+//     min-width: ;
+// }
