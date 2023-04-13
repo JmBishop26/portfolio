@@ -4,11 +4,11 @@ import { Button, Container} from 'semantic-ui-react'
 import heroImg from '../../public/assets/img/jm-hero-4.png'
 import styles from '../styles/Hero.module.scss'
 import { motion } from 'framer-motion';
-import { SlSocialGoogle, SlSocialFacebook, SlSocialGithub, SlArrowDownCircle } from "react-icons/sl"
+import { FiArrowDownCircle, FiFacebook, FiGithub, FiMail } from 'react-icons/fi'
 
 export const Hero = () => {
   return (
-    <Container as="section" className={styles.heroSectionCont} fluid>
+    <Container as="section" className={styles.heroSectionCont} fluid id="home">
       <motion.div className={styles.heroSection} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <motion.div className={styles.heroPicCont} initial={{ opacity: 0, x: -1500 }} animate={{ opacity: 1, x: 0, transition: { delay: 1.1, duration:0.4 } }}>
           <Image src={heroImg} alt="JM Obispo's Image" className={styles.heroPic}/>
@@ -19,16 +19,15 @@ export const Hero = () => {
               <h4 className={styles.introName}>Hi! I&apos;m <span>John Michael Obispo</span>.</h4>
             </div>
             <div className={styles.introTitleBox}>
-              <h1 className={styles.introTitle}>Aspiring <span>Web Developer</span> from <span>Quezon City</span> </h1>
+              <h1 className={styles.introTitle}><span>Learning </span> and <span>Growing</span> Through <span> Coding</span>.</h1>
             </div>
-            <div className={styles.introLinksBox}>
-              <a className={styles.myProject} href="/assets/resume/Obispo John Michael V. - Resume.pdf" download>Resume <SlArrowDownCircle style={{ marginLeft:'0.5rem' }} size={'1.5rem'}/></a>
-              <a className={styles.myLinks} href='https://github.com/JmBishop26' target='_blank'><SlSocialGithub/></a>
-              <a className={styles.myLinks} href='https://www.facebook.com/jm.obispo.7/' target='_blank'><SlSocialFacebook/></a>
-              <a className={styles.myLinks} href='mailto:johnmichael.obispo@gmail.com' target='_blank'><SlSocialGoogle/></a>
-            </div>
+            <motion.div className={styles.introLinksBox} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <motion.div whileHover={{ scale: 1.1, y:-3,transition: { duration: 0.1 } }}><a className={styles.myProject} href="/assets/resume/Obispo John Michael V. - Resume.pdf" download>Resume <FiArrowDownCircle style={{ marginLeft:'0.5rem' }} size={'1.5rem'}/></a></motion.div>
+              <motion.div whileHover={{ scale: 1.1, y:-3,transition: { duration: 0.1 } }}><a className={styles.myLinks} href='https://github.com/JmBishop26' target='_blank'><FiGithub/></a></motion.div>
+              <motion.div whileHover={{ scale: 1.1, y:-3,transition: { duration: 0.1 } }}><a className={styles.myLinks} href='https://www.facebook.com/jm.obispo.7/' target='_blank'><FiFacebook/></a></motion.div>
+              <motion.div whileHover={{ scale: 1.1, y:-3,transition: { duration: 0.1 } }}><a className={styles.myLinks} href='mailto:johnmichael.obispo@gmail.com' target='_blank'><FiMail/></a></motion.div>
+            </motion.div>
           </motion.div>
-
         </motion.div>
       </motion.div>
     </Container>

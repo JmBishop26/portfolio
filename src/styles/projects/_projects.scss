@@ -1,0 +1,114 @@
+@import '../globals/globals';
+
+.projSectionCont{
+    display: flex !important;
+    background: $navbar-bg;
+    min-height: 100vh;
+
+    .projSection{
+        background-color: $navbar-bg;
+        max-width: 1200px;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+
+        .projHead{
+            font-family: $font;
+            text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+            font-size: 3.5rem;
+            color: $text-color;
+            font-weight: 800;
+            margin-top: 2rem;
+        }
+
+        .projectsBox{
+            margin: 2.5rem 0;
+            .project{
+                display: flex;
+                border: 2px solid rgba(1,27,73, 0.089);
+                padding: 3rem;
+                background: rgba(1,27,73, 0.032);
+                margin-bottom: 2rem;
+                border-radius: 20px;
+                .projImgBox{
+                    width: 60%;
+                    display: flex;
+                    align-items: center;
+                    .projImg{
+                        width: 95%;
+                        height: auto;
+                        border-radius: 10px;
+                        box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.4);
+                    }
+                }
+
+                .projInfoBox{
+                    width: 40%;
+                    font-family: $font;
+                    .projTitle{
+                        font-family: $font; 
+                        color: $text-color;
+                        font-size: 2.8rem;
+                        font-weight: 600;
+                        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+                    }
+                    .projType{
+                        font-family: $font; 
+                        color: $text-color;
+                        font-weight: 100;
+                        font-size: 1.4rem;
+                    }
+                    .projDesc{
+                        color: $text-color;
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                        opacity: 85%;
+                    }
+                    .projTags{
+                        margin: 0 0 1rem;
+                        overflow: hidden;
+                        overflow-wrap: break-word;
+                        .projTag{
+                            background: rgba(1,27,73, 0.151);
+                            margin-right: 0.5rem;
+                            padding: 0.5rem 1.75rem;
+                            border-radius: 3rem;
+                            white-space: nowrap;
+                            font-weight: 600;
+                            color: $text-color;
+                            line-height: 3rem;
+                        }
+                    }
+                    .projActions{
+                        display: inline-flex;
+                        align-items: center;    
+                        .projVisit{
+                            background: $accent;
+                            padding: 0.8rem 2.5rem;
+                            color: $white;
+                            font-weight: 600;
+                            border-radius: 6px;
+                            margin-right: 1.5rem;
+                            font-size: 1.2rem;
+                            display: inline-flex;
+                            align-items: center;
+                            box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+                        }
+                        .projGit{
+                            background: $bg-color-2;
+                            color: $white;
+                            font-size: 1.3rem;
+                            padding: 1.3rem;
+                            border-radius: 50%;
+                            display: inline-flex;
+                            align-items: center;
+                            transition: all .2s ease-in-out;
+                            box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

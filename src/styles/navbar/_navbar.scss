@@ -49,23 +49,28 @@
           color: $text-color;
           font-family: $font;
           font-size: 1.2rem;
-
+          .navbarItemLink{
+            margin: 0 0.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            color: $text-color;
+            font-family: $font;
+            font-size: 1.2rem;
+            &:hover {
+              color: $accent;
+            }
+          }
           .modeToggler{
             cursor: pointer;
             background: transparent;
             color: $text-color;
             padding: 0;
-            &:hover{
-              color: $accent;
-            }
             .hideButton{
               display: none;
             }
           }
 
-          &:hover {
-            color: $accent;
-          }
+
           
         }
 

@@ -2,3 +2,9 @@
 .cursorPointer{
     cursor: pointer;
 }
+
+.disabled{
+    cursor: not-allowed;
+    box-shadow: none !important;
+    opacity: 50%;   
+}

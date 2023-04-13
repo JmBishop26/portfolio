@@ -5,6 +5,7 @@ import styles from '../styles/Navbar.module.scss'
 import { motion } from "framer-motion"
 import { modeChange } from '@/utils/functions';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const MENU_ITEMS = [
   { label: "Home", icon: null },
@@ -28,10 +29,10 @@ export const Navbar = () => {
   }
 
   return (
-    <Container className={styles.navCont} fluid>
+    <Container className={styles.navCont} fluid> 
       <motion.div className={styles.navbar} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <motion.div className={styles.navbarBrand} initial={{ opacity: 0, y: -80 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1, type: 'tween', duration:0.2} }}>
-          JM<span> Obispo</span>
+          JM <span> Obispo</span>
         </motion.div>
         <motion.div className={styles.navbarMenu}>
           {
@@ -40,7 +41,7 @@ export const Navbar = () => {
                 initial={{ opacity: 0, y: -80 }} 
                 animate={{ opacity: 1, y: 0, transition: { delay: index * 0.15  + 0.3, type: 'tween', duration:0.2 } }}
               >
-                <Menu.Item content={item.label}/>
+                <a href={'#'+item.label.toLowerCase()} className={styles.navbarItemLink}><Menu.Item content={item.label}/></a>
               </motion.div>
 
               ))
