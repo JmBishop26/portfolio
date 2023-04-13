@@ -14,8 +14,6 @@ const MENU_ITEMS = [
   { label: "Contact", icon: null },
 ];
 
-const ITEM_DELAY = [0.1, 0.3, 0.5, 0.7,0.9];
-
 export const Navbar = () => {
 
   const [bodyClassName, setBodyClassName] = useState('light_mode');

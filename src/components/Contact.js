@@ -30,7 +30,7 @@ function AboutBox ({children}) {
   return(
     <div className={styles.abtBox} ref={ref} style={{ 
       opacity: isInView ? 1 : 0,
-      transition: "all 0.5s ease-in-out 0.3s"
+      transition: "all 0.5s ease-in-out 0.5s"
      }}>
       { children }
     </div>
@@ -43,71 +43,23 @@ function AboutImageBox({children}){
     <div className={styles.abtImgBox} ref={ref} style={{ 
       transform: isInView ? "translateX(0px)" : "translateX(40px)",
       opacity: isInView ? 1 : 0,
-      transition: "all 0.5s ease-in-out 0.3s"
+      transition: "all 0.5s ease-in-out 0.5s"
      }}>
       { children }
     </div>
   )
 }
 
-function InterestBox(){
+function MiscBox({children, className}){
   const ref = useRef (null);
   const isInView = useInView(ref,{once:true});
   return(
-    <div className={styles.interestSection} ref={ref} style={{ 
+    <div className={className} ref={ref} style={{ 
       transform: isInView ? "translateY(0px)" : "translateY(40px)",
       opacity: isInView ? 1 : 0,
-      transition: "all 0.5s ease-in-out 0.6s"
+      transition: "all 0.5s ease-in-out 1s"
      }}>
-            <h2 className={styles.abtHead}>Interests</h2>
-            <Grid columns={5} className={styles.abtGrid}>
-              {
-                myInterests.map((item, index)=>(
-                  <Grid.Column key={index} className={styles.abtGridCols}>
-                    <div className={styles.interest} style={{ 
-                      transform: isInView ? "translateY(0px)" : "translateY(50px)",
-                      opacity: isInView ? 1 : 0,
-                      transition: "all 0.5s ease-in-out "+ (index * 0.3 + 1) +"s",
-                     }}
-                     >
-                      <p className={styles.intIcon}>{item.icon}</p>
-                      <p className={styles.intName}>{item.name}</p>
-                    </div>
-                  </Grid.Column>
-                ))
-              }
-            </Grid>
-    </div>
-  )
-}
-
-function SkillsBox(){
-  const ref = useRef (null);
-  const isInView = useInView(ref,{once:true});
-  return(
-    <div className={styles.skillSection} ref={ref} style={{ 
-      transform: isInView ? "translateY(0px)" : "translateY(40px)",
-      opacity: isInView ? 1 : 0,
-      transition: "all 0.5s ease-in-out 0.6s"
-     }}>
-            <h2 className={styles.abtHead}>Skills</h2>
-            <Grid columns={5} className={styles.skillGrid} centered>
-              {
-                mySkills.map((item, index)=>(
-                  <Grid.Column key={index} className={styles.skillGridCols}>
-                    <div className={styles.skill} style={{ 
-                      transform: isInView ? "translateY(0px)" : "translateY(50px)",
-                      opacity: isInView ? 1 : 0,
-                      transition: "all 0.5s ease-in-out "+ (index * 0.3 + 1) +"s",
-                     }}
-                     >
-                      <p className={styles.intIcon}>{item.icon}</p>
-                      <p className={styles.intName}>{item.name}</p>
-                    </div>
-                  </Grid.Column>
-                ))
-              }
-            </Grid>
+      { children }
     </div>
   )
 }
@@ -124,10 +76,10 @@ function SkillsBox(){
 //       { children }
 //     </div>
 //   )
-// }                      initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0, transition:{ delay: index * 0.3 + 1 , duration: 0.5 } }}
+// }
 
   return (
-    <Container as="section" className={styles.aboutCont} fluid id="about">
+    <Container as="section" className={styles.aboutCont} fluid id="contact">
       <div className={styles.about}>
         <div className={styles.abtTitleBox}>
             <Title>About</Title>
@@ -144,8 +96,39 @@ function SkillsBox(){
             <Image src={abtImg} className={styles.abtImg}></Image>
           </AboutImageBox>
         </div>
-        <InterestBox />
-        <SkillsBox />
+        <MiscBox className={styles.interestSection}>
+            <h2 className={styles.abtHead}>Interests</h2>
+            <Grid columns={5} className={styles.abtGrid}>
+              {
+                myInterests.map((item, index)=>(
+                <motion.div  key={index}>
+                  <Grid.Column className={styles.abtGridCols}>
+                    <motion.div className={styles.interest} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0, transition:{ delay: index * 1 + 1 , duration: 0.5 } }}>
+                      <p className={[styles.intIcon].join(' ')}>{item.icon}</p>
+                      <p className={styles.intName}>{item.name}</p>
+                    </motion.div>
+                  </Grid.Column>
+                </motion.div>
+
+                ))
+              }
+            </Grid>
+        </MiscBox>
+        <MiscBox className={styles.skillSection}> 
+          <h2 className={styles.abtHead}>Skills</h2>
+          <Grid columns={5} className={styles.skillGrid} centered>
+          {
+                mySkills.map((item, index)=>(
+                  <Grid.Column key={index} className={styles.skillGridCols}>
+                    <div className={styles.skill}>
+                      <p className={styles.intIcon}>{item.icon}</p>
+                      <p className={styles.intName}>{item.name}</p>
+                    </div>
+                  </Grid.Column>
+                ))
+              }
+          </Grid>
+        </MiscBox>
       </div>
     </Container>
   )
