@@ -46,12 +46,12 @@
                 color: $text-color;
                 text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
             }
-
             .aboutText{
                 text-indent: 10%;
                 text-align: justify;
                 font-size: 1.3rem;
                 font-weight: 500;
+                font-family: $font;
             }
         }
         .abtImgBox{
@@ -64,14 +64,12 @@
                 width: 100%;
                 height: 100%;
                 border-radius: 20px;
-                border: 2px solid rgba(1,27,73, 0.089);
                 transition: 0.3s all ease-in-out;
             }
             &:hover{
                 .abtImg{
                     transform: scale(1.1);
                     border-radius: 20px;
-                    filter: none;
                 }
             }
         }
