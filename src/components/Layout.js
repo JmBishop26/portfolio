@@ -3,14 +3,17 @@ import { Navbar } from './Navbar'
 import { Hero } from './Hero';
 import { Projects } from './Projects';
 import { About } from './About';
-export const Layout = ({ children }) => {
+import { Contact } from './Contact';
+import { Footer } from './Footer';
+export const Layout = () => {
     return (
       <>
         <Navbar />
         <Hero/>
         <Projects/>
         <About/>
-        {children}
+        <Contact />
+        <Footer/>
       </>
     );
   };

@@ -4,7 +4,7 @@
 }
 
 .disabled{
-    cursor: not-allowed;
+    cursor: not-allowed !important;
     box-shadow: none !important;
     opacity: 50%;   
 }

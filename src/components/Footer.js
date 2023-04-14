@@ -14,7 +14,7 @@ const MENU_ITEMS = [
   { label: "Contact", icon: null },
 ];
 
-export const Navbar = () => {
+export const Footer = () => {
 
   const [bodyClassName, setBodyClassName] = useState('light_mode');
 
