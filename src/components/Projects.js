@@ -5,47 +5,18 @@ import styles from '../styles/Projects.module.scss'
 import { motion, useInView } from 'framer-motion';
 import { myProjects } from '../utils/myProjects'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
-
-
-
-function Project({children}){
-  const ref = useRef (null);
-  const isInView = useInView(ref,{once:true});
-  return(
-    <div ref={ref} style={{
-      transform: isInView ? "translateY(0px)" : "translateY(40px)",
-      opacity: isInView ? 1 : 0,
-      transition: "all 0.5s ease-in-out 0s"
-    }} className={styles.project}>
-      {children}
-    </div>
-  )
-}
-
-function Title({children}){
-  const ref = useRef (null);
-  const isInView = useInView(ref,{once:true});
-  return(
-    <div ref={ref} style={{
-      transform: isInView ? "translateY(0px)" : "translateY(40px)",
-      opacity: isInView ? 1 : 0,
-      transition: "all 0.5s ease-in-out 0s"
-    }}>
-      <h1 className={styles.projHead} >{ children }</h1>
-    </div>
-  )
-}
+import { Title, BoxFromTop } from '../utils/Components';
 
 export const Projects = () => {
 
   return (
     <Container as="section" className={styles.projSectionCont} fluid id="projects">
       <div className={styles.projSection}>
-        <Title>Projects</Title>
+        <Title className={styles.projHead}>Projects</Title>
         <div className={styles.projectsBox}>
         {
             myProjects.map((item, index) => (
-                <Project className={styles.project} key={index}>
+                <BoxFromTop className={styles.project} key={index} delayProp="0">
                   <div className={styles.projImgBox}>
                     <Image src={item.image} className={styles.projImg} width={1920} height={1080}></Image>
                   </div>
@@ -65,13 +36,13 @@ export const Projects = () => {
                         {
                           item.mainLink === ''? (
                             <Popup
-                              trigger={<p className={[styles.projVisit, styles.disabled].join(' ')}>Visit <FiExternalLink style={{ marginLeft:'0.5rem' }}/></p>}
+                              trigger={<p className={[styles.projVisit, styles.disabled].join(' ')}>Visit <FiExternalLink/></p>}
                               content='Link Unavailable'
                               inverted
                             />
                           ):
                           (
-                            <a className={styles.projVisit} href={item.mainLink} target='_blank'>Visit <FiExternalLink style={{ marginLeft:'0.5rem' }}/></a>
+                            <a className={styles.projVisit} href={item.mainLink} target='_blank'>Visit <FiExternalLink/></a>
                           )
                         }
                       </motion.div>
@@ -90,7 +61,7 @@ export const Projects = () => {
                       </motion.div>
                     </div>
                   </div>
-                </Project>
+                </BoxFromTop>
               ))
           }
         </div>

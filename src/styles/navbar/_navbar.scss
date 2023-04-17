@@ -7,9 +7,9 @@
 
 :global(#app){
   .navCont{
-    position: sticky;
     background-color: $navbar-bg;
 
+    z-index: 999999;
     .navbar {
       background-color: $navbar-bg;
       display: flex;

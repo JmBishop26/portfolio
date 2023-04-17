@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import { Button, Container} from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import heroImg from '../../public/assets/img/jm-hero-4.png'
 import styles from '../styles/Hero.module.scss'
 import { motion } from 'framer-motion';
-import { FiArrowDownCircle, FiFacebook, FiGithub, FiMail } from 'react-icons/fi'
+import { FiArrowDownCircle} from 'react-icons/fi'
 import { myContacts } from '@/utils/myContacts'
 
 export const Hero = () => {
