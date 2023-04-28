@@ -56,6 +56,20 @@ export function ImageFromRight({children, className}){
     )
 }
 
+export function ImageFromLeft({children, className, delayProp}){
+  const ref = useRef (null);
+  const isInView = useInView(ref,{once:true});
+  return(
+    <div className={className} ref={ref} style={{ 
+      transform: isInView ? "translateX(0px)" : "translateX(-100px)",
+      opacity: isInView ? 1 : 0,
+      transition: "all 0.5s ease-in-out "+delayProp+"s"
+     }}>
+      { children }
+    </div>
+  )
+}
+
 
 export function AboutSections ({ sectionClass, sectionTitle, sectionTitleClass, gridClass, data, columnClass, perObjectClass, iconClass, textClass}){
     const ref = useRef (null);
@@ -64,7 +78,7 @@ export function AboutSections ({ sectionClass, sectionTitle, sectionTitleClass, 
     return(  
       <BoxFromTop className={sectionClass} ref={ref} delayProp="0.6">
         <h2 className={sectionTitleClass}>{sectionTitle}</h2>
-        <Grid columns={5} className={gridClass} centered>
+        <Grid columns={5} className={gridClass} centered doubling>
           {
             data.map((item, index)=>(
               <Grid.Column key={index} className={columnClass}>

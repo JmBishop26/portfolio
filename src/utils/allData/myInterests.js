@@ -1,7 +1,6 @@
 import { RiNetflixFill, RiSpotifyFill,  } from 'react-icons/ri'
 import { FaBasketballBall, FaTableTennis } from 'react-icons/fa'
 import { SiRiotgames } from 'react-icons/si'
-import styles from '../styles/About.module.scss'
 
 export const myInterests = [
     {

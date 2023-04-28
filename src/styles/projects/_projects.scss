@@ -1,17 +1,11 @@
 @import '../globals/globals';
 
 .projSectionCont{
-    display: flex !important;
-    background: $navbar-bg;
     min-height: 100vh;
 
     .projSection{
-        background-color: $navbar-bg;
-        max-width: 1200px;
-        position: relative;
-        margin: 0 auto;
-        width: 100%;
-
+        min-height: 100vh;
+        @include sections;
         .projHead{
             font-family: $font;
             text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
@@ -19,23 +13,33 @@
             color: $text-color;
             font-weight: 800;
             margin-top: 2rem;
+            @include break{
+                font-size: 3rem;
+                text-align: center;
+            }
         }
-
         .projectsBox{
-            margin: 2.5rem 0;
+            margin: 2.5rem 0rem 0 0;
+            @include break{
+                margin: 1.5rem 0;
+            }
             .project{
-                display: flex;
                 border: 2px solid rgba(1,27,73, 0.089);
                 padding: 3rem;
                 background: rgba(1,27,73, 0.032);
                 margin-bottom: 2rem;
                 border-radius: 20px;
+                @include break{
+                    padding: 1.5rem;
+                }
                 .projImgBox{
-                    width: 60%;
                     display: flex;
                     align-items: center;
+                    @include break{
+                        margin-bottom: 1rem;
+                    }
                     .projImg{
-                        width: 95%;
+                        width: 100%;
                         height: auto;
                         border-radius: 10px;
                         box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.4);
@@ -43,26 +47,37 @@
                 }
 
                 .projInfoBox{
-                    width: 40%;
-                    font-family: $font;
                     .projTitle{
                         font-family: $font; 
                         color: $text-color;
                         font-size: 2.8rem;
                         font-weight: 600;
                         text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+                        @include break{
+                            font-size: 2rem;
+                            text-align: center;
+                        }
                     }
                     .projType{
                         font-family: $font; 
                         color: $text-color;
                         font-weight: 100;
                         font-size: 1.4rem;
+                        @include break{
+                            font-size: 1.1rem;
+                            text-align: center;
+                        }
                     }
                     .projDesc{
                         color: $text-color;
                         font-weight: 500;
                         font-size: 1.2rem;
                         opacity: 85%;
+                        @include break{
+                            font-size: 0.9rem;
+                            text-align: justify;
+                            text-indent: 10%;
+                        }
                     }
                     .projTags{
                         margin: 0 0 1rem;
@@ -77,14 +92,23 @@
                             font-weight: 600;
                             color: $text-color;
                             line-height: 3rem;
+                            @include break{
+                                font-size: 0.8rem;
+                                text-align: center;
+                                padding: 0.5rem 1.4rem;
+                            }
                         }
                     }
                     .projActions{
                         display: inline-flex;
-                        align-items: center;    
+                        align-items: center;
+                        width: 100%;
+                        @include break{
+                            justify-content: center;
+                        }
                         .projVisit{
                             background: $accent;
-                            padding: 0.8rem 2.5rem;
+                            padding: 0.6rem 1.8rem;
                             color: $white;
                             font-weight: 600;
                             border-radius: 6px;
@@ -93,7 +117,10 @@
                             display: inline-flex;
                             align-items: center;
                             box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
-
+                            @include break{
+                                font-size: 1rem;
+                                text-align: center;
+                            }
                         }
                         .projGit{
                             background: $bg-color-2;
@@ -105,6 +132,10 @@
                             align-items: center;
                             transition: all .2s ease-in-out;
                             box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+                            @include break{
+                                font-size: 1rem;
+                                text-align: center;
+                            }
                         }
                         .projVisit svg{
                             margin-left:0.5rem; 

@@ -7,41 +7,43 @@
 
 :global(#app){
   .navCont{
-    background-color: $navbar-bg;
-
-    z-index: 999999;
     .navbar {
-      background-color: $navbar-bg;
-      display: flex;
-      justify-content: space-between;
+      display: flex ;
       align-items: center;
-      padding: 2rem 1rem;
+      padding: 2rem 0;
       box-shadow: none;
       border: none;
-      max-width: 1200px;
-      position: relative;
-      margin: 0 auto;
       z-index: 999999;
-      
+      @include sections;
+
+      .column{
+        padding-left: 0;
+      }
+
       .navbarBrand {
         font-size: 2.5rem;
         font-weight: 900;
         cursor: pointer;
         color: $text-color;
         font-family: $font;
-        display: flex;
-        align-items: center;
         text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
         span{
           color: $accent;
         }
+        @include break{
+          padding-top: 1rem;
+        }
       }
+      
+
       
       .navbarMenu {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        
+        @include break{
+          display: none;
+        }
         .navbarItem {
           margin: 0 0.5rem;
           cursor: pointer;

@@ -1,0 +1,17 @@
+@import 'breakpoints';
+
+@mixin before-break {
+    @media (min-width: map-get($breakpoints, 'before-break')) {
+        @content;
+    }
+}
+
+@mixin break {
+    @media (max-width: map-get($breakpoints, 'break')) {
+        @content;
+    }
+}
+
+@mixin sections {
+    font-family: $font !important;
+}

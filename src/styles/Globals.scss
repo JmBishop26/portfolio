@@ -1,4 +1,8 @@
+@import './globals/globals';
 html{
     scroll-behavior: smooth;
 }
 
+body{
+    background: $navbar-bg;
+}
