@@ -48,6 +48,10 @@
                 }
                 .accAbout{
                     text-align: center;
+                    display: none;
+                    @include break{
+                        display: block;
+                    }
                     .accHead{
                         display: inline;
                         font-family: $font;
