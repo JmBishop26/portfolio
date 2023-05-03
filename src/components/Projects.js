@@ -7,6 +7,12 @@ import data from '../utils/data'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import { Title, BoxFromTop } from '../utils/Components';
 
+import proj1 from "../../public/assets/img/projects/1.jpg"
+import proj2 from "../../public/assets/img/projects/2.jpg"
+import proj3 from "../../public/assets/img/projects/3.jpg"
+import proj4 from "../../public/assets/img/projects/4.jpg"
+
+
 export const Projects = () => {
 
   const myProjects = data.myProjects
@@ -23,7 +29,7 @@ export const Projects = () => {
                   <Grid>
                     <Grid.Row>
                       <Grid.Column className={styles.projImgBox} computer={10} widescreen={10} largeScreen={10} tablet={16} mobile={16}>
-                        <Image src={item.image} className={styles.projImg} width={1280} height={720} alt={'Project: '+item.title}></Image>
+                        <Image src={[proj1, proj2, proj3, proj4][index]} className={styles.projImg} alt={'Project: '+item.title}></Image>
                       </Grid.Column>
                       <Grid.Column className={styles.projInfoBox} computer={6}  widescreen={6} largeScreen={6} tablet={16} mobile={16}>                
                         <h2 className={styles.projTitle}>{item.title}</h2>
