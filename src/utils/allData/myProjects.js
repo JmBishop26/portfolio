@@ -38,7 +38,7 @@ export const myProjects = [
         image: '/assets/img/projects/4.jpg', 
         gitLink: 'https://github.com/JmBishop26/petocare', 
         mainLink: '',
-        description: 'A web-based application that provide recipe recommendations based on user\'s provided budget.', 
+        description: 'A web-based pet hotel booking system that also provide a small e-commerce where users can buy pet products for their fur babies', 
         tags: ['HTML5', 'CSS3', 'PHP', 'MySQL'],
       },
 ]
