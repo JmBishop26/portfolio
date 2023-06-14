@@ -5,4 +5,10 @@ html{
 
 body{
     background: $navbar-bg;
+    &.dark{
+        background: #1b1818;
+        p,h1{
+            color: white !important;
+        }
+    }
 }

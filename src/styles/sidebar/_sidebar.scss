@@ -1,0 +1,28 @@
+@import "../globals/globals";
+
+.sidebar{
+    background: $navbar-bg;
+    text-align: center;
+    box-shadow: none !important;
+    .sidebarList{
+        .sidebarListItems{
+            margin: 2rem 0;
+            .sidebarLinks{
+                font-family: $font;
+                color: $text-color;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            p{
+                display: inline-block !important;
+                color: $text-color;
+            }
+            .radioToggler{
+                margin: 0 1rem;
+            }
+            .closeBtn{
+                background: transparent;
+            }
+        }
+    }
+}

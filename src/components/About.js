@@ -34,7 +34,7 @@ export const About = () => {
             <Grid.Column computer={12} tablet={16} mobile={16}>
               <FadeInBox className={styles.abtBox} delayProp={0.3}>
                 <h2 className={styles.abtHead}>Who Am I?</h2>
-                <Accordion className={styles.accAbout} defaultActiveIndex={0} panels={panels}/>
+                <Accordion className={styles.accAbout} panels={panels}/>
                 <div>
                   <p className={styles.aboutText}>I am JM Obispo, a 4th year Bachelor of Science in Information Technology <strong>(BSIT)</strong> student from the Polytechnic University of the Philippines <strong>(PUP)</strong>. I&apos;m an aspiring Web Developer from Quezon City.</p>
                   <p className={styles.aboutText}>I developed the Juan Dela Cook website for our Capstone Project, a web-based application that provides recipe recommendations based on user&apos;s provided budget.</p>
