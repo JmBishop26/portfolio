@@ -73,7 +73,7 @@ export function ImageFromLeft({children, className, delayProp}){
 
 export function AboutSections ({ sectionClass, sectionTitle, sectionTitleClass, gridClass, data, columnClass, perObjectClass, iconClass, textClass}){
     const ref = useRef (null);
-    const isInView = useInView(ref,{once:true});
+    // const isInView = useInView(ref,{once:true});
   
     return(  
       <BoxFromTop className={sectionClass} ref={ref} delayProp="0.6">
