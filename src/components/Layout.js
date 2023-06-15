@@ -13,8 +13,6 @@ export const Layout = () => {
     setSidebarOpen(!sidebarOpen)
   }
   
-  console.log(sidebarOpen)
-
     return (
       <>
         <SideBar isOpen={sidebarOpen}>
