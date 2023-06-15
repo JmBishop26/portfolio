@@ -24,6 +24,6 @@ export const sendEmail = async (formData)=>{
             })
         }
     } catch (error) {
-        console.error(`${error}`)
+        console.log(`${error}`)
     }
 }
