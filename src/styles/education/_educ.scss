@@ -1,0 +1,89 @@
+@import "../globals/globals";
+
+.educSectionCont{
+
+    h1, h2, h3, p, span{
+        font-family: $font; 
+        // color: $text-color;
+    }
+    .educBox{
+        margin: 2.5rem 0;
+        .timeline{
+            &::after{
+                content: '' !important;
+                position: absolute !important;
+                width: 6px !important;
+                background-color: rgba(0, 18, 49, 0.726) !important;
+                top: 0 !important;
+                bottom: 0 !important;
+                left: 10px !important;
+                margin-left: -3px !important;
+                @include break{
+                    left: 5px !important;
+                }
+            }
+            .educItems{
+                position: relative;
+                left: 30px;
+                margin: 1.5rem 0;
+                @include break{
+                    left: 15px;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    background-color: white;
+                    border: 3px solid $text-color;
+                    left: -47px;
+                    top: 10px;
+                    border-radius: 50%;
+                    z-index: 1;
+                    @include break{
+                        width: 20px;
+                        height: 20px;
+                        top: 5px;
+                        left: -35px;
+                    }
+                }
+                h2{
+                    color: $text-color;
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+                    @include break{
+                        font-size: 1.7rem ;
+                    }
+                }
+                .educCard{
+                    border: 2px solid rgba(1,27,73, 0.089);
+                    background: rgba(1,27,73, 0.032);
+                    box-shadow: none !important;
+                    border-radius: 1rem;
+                    width: 98%;
+                    @include break{
+                        width: 95%;
+                    }
+                    h3, p{
+                        color: $text-color;
+                    }
+                    h3{
+                        font-size: 1.5rem;
+                        @include break{
+                            font-size: 1.2rem ;
+                        }
+                    }
+                    p, span{
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                        @include break{
+                            font-size: 1rem ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

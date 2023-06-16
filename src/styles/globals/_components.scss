@@ -6,3 +6,11 @@
 //     width: 100%;
 //     font-family: $font;
 // }
+.title{
+    font-family: $font;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+    font-size: 3.5rem;
+    color: $text-color;
+    font-weight: 800;
+    margin-top: 2rem;
+}

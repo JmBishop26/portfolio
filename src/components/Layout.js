@@ -6,6 +6,7 @@ import { About } from './About';
 import { Contact } from './Contact';
 import { Footer } from './Footer';
 import SideBar from './SideBar';
+import { Educ } from './Educ';
 export const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
@@ -18,6 +19,7 @@ export const Layout = () => {
         <SideBar isOpen={sidebarOpen}>
           <Navbar toggleSidebar={toggleSidebar}/>
           <Hero/>
+          <Educ/>
           <Projects/>
           <About/>
           <Contact />

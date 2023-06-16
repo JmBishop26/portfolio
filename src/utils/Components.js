@@ -42,7 +42,7 @@ export function FadeInBox ({children, className, delayProp}) {
     ) 
   }
 
-export function ImageFromRight({children, className}){
+export function DivFromRight({children, className}){
     const ref = useRef (null);
     const isInView = useInView(ref,{once:true});
     return(
@@ -56,7 +56,7 @@ export function ImageFromRight({children, className}){
     )
 }
 
-export function ImageFromLeft({children, className, delayProp}){
+export function DivFromLeft({children, className, delayProp}){
   const ref = useRef (null);
   const isInView = useInView(ref,{once:true});
   return(

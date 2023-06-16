@@ -6,7 +6,7 @@ import styles from '../styles/Hero.module.scss'
 import { motion } from 'framer-motion';
 import { FiArrowDownCircle} from 'react-icons/fi'
 import data from '../utils/data'
-import { FadeInBox, ImageFromLeft } from '@/utils/Components'
+import { FadeInBox, DivFromLeft } from '@/utils/Components'
 
 export const Hero = () => {
   const myContacts = data.myContacts
@@ -14,9 +14,9 @@ export const Hero = () => {
     <Container as="section" className={styles.heroSectionCont} id="home">
       <Grid className={[styles.heroSection, styles.section].join(' ')}>
         <Grid.Column only='computer' computer={5}>
-          <ImageFromLeft className={styles.heroPicCont} delayProp={1.1}>
+          <DivFromLeft className={styles.heroPicCont} delayProp={1.1}>
             <Image src={heroImg} alt="JM Obispo's Image" className={styles.heroPic}/>
-          </ImageFromLeft>
+          </DivFromLeft>
         </Grid.Column>
         <Grid.Column computer={11} tablet={16} mobile={16}>
           <FadeInBox className={styles.intro} delayProp={1.5}>

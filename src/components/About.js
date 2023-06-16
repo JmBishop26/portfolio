@@ -4,7 +4,7 @@ import { Container, Grid, Accordion } from 'semantic-ui-react'
 import styles from '../styles/About.module.scss'
 import abtImg from '../../public/assets/img/about-image-2.jpg'
 import data from '../utils/data'
-import { FadeInBox, ImageFromRight, Title, AboutSections } from '@/utils/Components';
+import { FadeInBox, DivFromRight, Title, AboutSections } from '@/utils/Components';
 export const About = () => {
 
   const myInterests = data.myInterests
@@ -42,9 +42,9 @@ export const About = () => {
               </FadeInBox>
             </Grid.Column>
             <Grid.Column computer={4} only='computer' >
-              <ImageFromRight className={styles.abtImgBox}>
+              <DivFromRight className={styles.abtImgBox}>
                 <Image src={abtImg} className={styles.abtImg} alt="JM\'s Image"></Image>
-              </ImageFromRight>
+              </DivFromRight>
             </Grid.Column>
         </Grid>
         <AboutSections sectionClass={styles.interestSection} sectionTitle="Interests" sectionTitleClass={styles.abtHead} gridClass={styles.abtGrid} data={myInterests} columnClass={styles.abtGridCols} perObjectClass={styles.interest} iconClass={styles.intIcon} textClass={styles.intName}/>
