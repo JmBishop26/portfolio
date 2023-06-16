@@ -27,9 +27,7 @@ export const About = () => {
   return (
     <Container as="section" className={styles.aboutCont} id="about">
       <div className={[styles.about, styles.section].join(' ')}>
-        <div className={styles.abtTitleBox}>
-            <Title className={styles.abtTitle} >About</Title>
-          </div>
+          <Title className={styles.title} >About</Title>
         <Grid className={styles.abtSection}>
             <Grid.Column computer={12} tablet={16} mobile={16}>
               <FadeInBox className={styles.abtBox} delayProp={0.3}>

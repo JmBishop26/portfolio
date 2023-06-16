@@ -29,8 +29,11 @@
             border-radius: 20px;
             background: rgba(1,27,73, 0.032);
             padding: 3rem;
-            margin-bottom: 2rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
             @include break{
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
                 padding: 1.5rem;
             }
             .contactGrid{

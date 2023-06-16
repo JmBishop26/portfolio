@@ -20,7 +20,7 @@ export const Projects = () => {
   return (
     <Container as="section" className={styles.projSectionCont} id="projects">
       <div className={[styles.projSection, styles.section].join(' ')}>
-        <Title className={styles.projHead}>Projects</Title>
+        <Title className={styles.title}>Projects</Title>
         <Grid className={styles.projectsBox}>
           <Grid.Column>
         {

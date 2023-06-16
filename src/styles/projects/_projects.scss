@@ -19,9 +19,11 @@
             }
         }
         .projectsBox{
-            margin: 2.5rem 0rem 0 0;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
             @include break{
-                margin: 1.5rem 0;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
             }
             .project{
                 border: 2px solid rgba(1,27,73, 0.089);

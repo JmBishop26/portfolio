@@ -28,7 +28,7 @@ export const Contact = () => {
   return (
     <Container as="section" className={styles.contactCont} id="contact">
       <div className={[styles.contact, styles.section].join(' ')}>
-        <Title className={styles.contactTitle}>Contact Information</Title>
+        <Title className={styles.title}>Contact Information</Title>
         <BoxFromTop className={styles.contactGridBox} delayProp={0.1}>
           <Grid columns={2} centered className={styles.contactGrid} relaxed='very' doubling>
             <Grid.Column className={styles.contactGridCols}>

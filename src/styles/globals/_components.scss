@@ -1,3 +1,4 @@
+@import 'mixins';
 // .section{
 //     background-color: $navbar-bg;
 //     max-width: 1200px;
@@ -13,4 +14,8 @@
     color: $text-color;
     font-weight: 800;
     margin-top: 2rem;
+    @include break{
+        font-size: 3rem;
+        text-align: center;
+    }
 }

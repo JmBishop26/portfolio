@@ -7,27 +7,29 @@
     .about{
         height: fit-content; 
         @include sections;
-
-        .abtTitleBox{
-            padding: 2rem 0;
-            .abtTitle{
-                font-family: $font;
-                text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
-                font-size: 3.5rem;
-                color: $text-color;
-                font-weight: 800;
-                display: block;
-                @include break{
-                    font-size: 3rem;
-                    text-align: center;
-                }
+        padding: 2rem 0;
+        .abtTitle{
+            font-family: $font;
+            text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+            font-size: 3.5rem;
+            color: $text-color;
+            font-weight: 800;
+            display: block;
+            @include break{
+                font-size: 3rem;
+                text-align: center;
             }
         }
         
         .abtSection{
             height: fit-content;
             flex-wrap: nowrap;
-
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            @include break{
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
             .abtBox{
                 border: 2px solid rgba(1,27,73, 0.089);
                 border-radius: 20px;
