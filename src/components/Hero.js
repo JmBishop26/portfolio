@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import { Container, Grid } from 'semantic-ui-react'
+import { Button, Container, Grid } from 'semantic-ui-react'
 import heroImg from '../../public/assets/img/jm-hero-4.png'
 import styles from '../styles/Hero.module.scss'
 import { motion } from 'framer-motion';
-import { FiArrowDownCircle} from 'react-icons/fi'
+import { FiArrowDownCircle, FiArrowUp} from 'react-icons/fi'
 import data from '../utils/data'
 import { FadeInBox, DivFromLeft } from '@/utils/Components'
 
@@ -29,16 +29,13 @@ export const Hero = () => {
 
 
             <motion.div className={styles.introLinksBox} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <motion.div whileHover={{ scale: 1.1, y:-3,transition: { duration: 0.1 } }}><a className={styles.myProject} href="/assets/resume/Obispo John Michael V. - Resume.pdf" download>Resume <FiArrowDownCircle style={{ marginLeft:'0.5rem' }} size={'1.5rem'}/></a></motion.div>
+              <motion.div whileHover={{ scale: 1.1, y:-3,transition: { duration: 0.1 } }}><a className={styles.myProject} href="/assets/resume/my-resume.pdf" download>Resume <FiArrowDownCircle style={{ marginLeft:'0.5rem' }} size={'1.5rem'}/></a></motion.div>
               {/* {
                 myContacts.map((item, index)=>(
                   <motion.div key={index} whileHover={{ scale: 1.1, y:-3,transition: { duration: 0.1 } }}><a href={item.link} target='_blank' className={styles.myLinks}>{item.icon}</a></motion.div>
                 ))
               } */} 
             </motion.div>
-
-
-
           </FadeInBox>
         </Grid.Column>
       </Grid>

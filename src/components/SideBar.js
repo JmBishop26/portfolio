@@ -3,7 +3,8 @@ import { Sidebar, Grid, Segment, Menu, Container, List, Radio, Button } from 'se
 import data from '@/utils/data'
 import Link from 'next/link'
 import styles from "../styles/Sidebar.module.scss"
-import { FiMoon, FiSun, FiX} from "react-icons/fi"
+import { FiMoon, FiSun, FiX, FiArrowUp} from "react-icons/fi"
+import ScrollToTop from 'react-scroll-to-top'
 export const SideBar = ({children, isOpen})=> {
     const menuItems = data.menuItems
     const [open, setOpen] = useState(isOpen)

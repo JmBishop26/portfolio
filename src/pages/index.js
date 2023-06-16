@@ -1,8 +1,30 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import { Layout } from '../components/Layout'
-
+import { Button } from 'semantic-ui-react';
+import { FiArrowUp } from 'react-icons/fi';
 export default function Home() {
+
+  const [scroll, setScroll] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = (e) =>{
+    e.preventDefault()
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
+
   return (
     <>
       <Head>
@@ -12,6 +34,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head> 
       <Layout/>
+      <Button circular icon={<FiArrowUp size={"2rem"}/>} className={scroll?"scrollToTop":"scrollToTop noDisplay"} onClick={scrollToTop} />
     </>
   )
 }

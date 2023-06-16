@@ -6,9 +6,22 @@ html{
 body{
     background: $navbar-bg;
     &.dark{
-        background: #1b1818;
-        p,h1{
+        background: $navbar-dark;
+        p,h1, h2, h3{
             color: white !important;
         }
+        .projTitle{
+            color: $white !important;
+        }
     }
+}
+
+.scrollToTop{
+    background: rgba(0, 18, 49, 0.726) !important;
+    color: $white !important;
+
+    position: fixed !important;
+    bottom: 40px !important;
+    right: 30px !important;
+    z-index: 1000 !important;
 }
