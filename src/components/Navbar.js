@@ -13,7 +13,7 @@ export const Navbar = ({toggleSidebar}) => {
 
   const toggleMode = ()=>{
     setIsDark(!isDark);
-    // document.body.classList.toggle("dark")
+    document.body.classList.toggle("dark")
   }
 
 
@@ -22,7 +22,7 @@ export const Navbar = ({toggleSidebar}) => {
       <Grid.Row className={[styles.navbar, styles.section].join(' ')}>
         <Grid.Column className={[styles.noPadding].join(' ')} computer={8} tablet={10}>
           <motion.div className={styles.navbarBrand} initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1, type: 'tween', duration:0.2} }}>
-            JM <span> Obispo</span>
+           <h1>JM <span> Obispo</span></h1> 
           </motion.div>
         </Grid.Column>
         <Grid.Column className={styles.navbarMenu} computer={8} only='computer'>
@@ -32,7 +32,11 @@ export const Navbar = ({toggleSidebar}) => {
                   initial={{ opacity: 0, y: -50 }} 
                   animate={{ opacity: 1, y: 0, transition: { delay: index * 0.15  + 0.3, type: 'tween', duration:0.2 } }}
                 >
-                  <a href={`#${item.label.toLowerCase()}`} className={styles.navbarItemLink}><Menu.Item content={item.label}/></a>
+                  <a href={`#${item.label.toLowerCase()}`} className={styles.navbarItemLink}>
+                    <Menu.Item >
+                      <p>{item.label}</p>
+                    </Menu.Item>
+                  </a>
                 </motion.div>
 
                 ))
@@ -42,8 +46,10 @@ export const Navbar = ({toggleSidebar}) => {
               animate={{ opacity: 1, y: 0, transition: { delay: 0.9, type: 'tween', duration:0.2 } }}
             >
               <Button className={[styles.modeToggler].join(" ")} onClick={toggleMode}>
-                <FiMoon size={'2rem'} className={ !isDark ? "" : styles.noDisplay}></FiMoon>
-                <FiSun size={'2rem'} className={ !isDark ? styles.noDisplay : ""}></FiSun>
+                {/* <p>
+                  <FiMoon size={'2rem'} className={ !isDark ? "" : styles.noDisplay}></FiMoon>
+                  <FiSun size={'2rem'} className={ !isDark ? styles.noDisplay : ""}></FiSun>
+                </p> */}
               </Button>
           </motion.div>
         </Grid.Column>

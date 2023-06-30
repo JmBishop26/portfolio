@@ -8,7 +8,7 @@ body{
     &.dark{
         background: $navbar-dark;
         p,h1, h2, h3{
-            color: white !important;
+            color: $white !important;
         }
         .projTitle{
             color: $white !important;
@@ -19,7 +19,6 @@ body{
 .scrollToTop{
     background: rgba(0, 18, 49, 0.726) !important;
     color: $white !important;
-
     position: fixed !important;
     bottom: 40px !important;
     right: 30px !important;

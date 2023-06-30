@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { Button, Container, Grid } from 'semantic-ui-react'
-import heroImg from '../../public/assets/img/jm-hero-4.png'
+import heroImg from '../../public/assets/img/jm-hero-2.png'
 import styles from '../styles/Hero.module.scss'
 import { motion } from 'framer-motion';
 import { FiArrowDownCircle, FiArrowUp} from 'react-icons/fi'

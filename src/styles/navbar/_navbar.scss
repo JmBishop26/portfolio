@@ -21,15 +21,18 @@
       }
 
       .navbarBrand {
-        font-size: 2.5rem;
-        font-weight: 900;
-        cursor: pointer;
-        color: $text-color;
-        font-family: $font;
-        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
-        span{
-          color: $accent;
+        h1{
+          font-size: 2.5rem;
+          font-weight: 900;
+          cursor: pointer;
+          color: $text-color;
+          font-family: $font;
+          text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+          span{
+            color: $accent;
+          }
         }
+
         @include break{
           // padding-top: 1rem;
         }
