@@ -36,9 +36,9 @@ export const myProjects = [
         title: 'Pet-O-Care',
         type: 'Pet Hotel Booking System',
         image: '/assets/img/projects/4.jpg', 
-        gitLink: 'https://github.com/JmBishop26/petocare', 
-        mainLink: '',
+        gitLink: 'https://github.com/JmBishop26/petocare-nextjs', 
+        mainLink: 'https://petocare-nextjs.vercel.app/',
         description: 'A web-based pet hotel booking system that also provide a small e-commerce where users can buy pet products for their fur babies', 
-        tags: ['HTML5', 'CSS3', 'PHP', 'MySQL'],
+        tags: ['Next.JS', 'Semantic-UI', 'MongoDB', 'Sass'],
       },
 ]
