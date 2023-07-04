@@ -4,8 +4,9 @@ import Image from 'next/image'
 import { Layout } from '../components/Layout'
 import { Button } from 'semantic-ui-react';
 import { FiArrowUp } from 'react-icons/fi';
+import Cookies from 'js-cookie';
 export default function Home() {
-
+  const theme = Cookies.get('jmIsDark')
   const [scroll, setScroll] = useState(false)
 
   useEffect(() => {

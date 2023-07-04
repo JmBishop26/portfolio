@@ -1,7 +1,7 @@
 @import "../globals/globals";
 
 .sidebar{
-    background: $navbar-bg;
+    background: $navbar-dark;
     text-align: center;
     box-shadow: none !important;
     .sidebarList{
@@ -9,13 +9,13 @@
             margin: 2rem 0;
             .sidebarLinks{
                 font-family: $font;
-                color: $text-color;
+                color: $white !important;
                 font-size: 1.5rem;
                 font-weight: 700;
             }
             p{
                 display: inline-block !important;
-                color: $text-color;
+                color: $white;
             }
             .radioToggler{
                 margin: 0 1rem;

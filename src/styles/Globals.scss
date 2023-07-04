@@ -7,12 +7,65 @@ body{
     background: $navbar-bg;
     &.dark{
         background: $navbar-dark;
-        p,h1, h2, h3{
+        p,h1, h2, h3, h4{
             color: $white !important;
         }
         .projTitle{
             color: $white !important;
         }
+        span{
+            color: #0052f7 !important;
+        }
+        .invert{
+            background: $navbar-bg !important;
+            p{
+                color: $text-color !important;
+            }
+        }
+        .generics{
+            .card{
+                border-color: rgba(255, 255, 255,0.2) !important;
+                background: rgba(255, 255, 255,0.1) !important ;
+                span{
+                    color: rgba(255, 255, 255,0.5) !important;
+                }
+                .smCard{
+                    color: $white !important;
+                }
+                .darkedLink{
+                    background: rgba(255, 255, 255, 0.726) !important;
+                    color: $black !important;
+                }
+                a, button{
+                    background: #0052f7 !important;
+                }
+            }
+            .smCard{
+                background: rgba(255, 255, 255,0.25) !important;
+                color: $white !important;
+            }
+            input, textarea{
+                background: rgba(255, 255, 255,0.25) !important;
+                &::-webkit-input-placeholder{
+                    color: $black !important;
+                }
+            }
+            .line{
+                &::after{
+                    background: rgba(255, 255, 255,0.25) !important;
+                }
+            }
+            .circle{
+                &::after{
+                    border: none !important;
+                }
+            }
+        }
+        .scrollToTop{
+            background: rgba(255, 255, 255, 0.726) !important;
+            color: $black !important;
+        }
+
     }
 }
 

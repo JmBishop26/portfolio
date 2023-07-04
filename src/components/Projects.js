@@ -18,14 +18,14 @@ export const Projects = () => {
   const myProjects = data.myProjects
 
   return (
-    <Container as="section" className={styles.projSectionCont} id="projects">
+    <Container as="section" className={[styles.projSectionCont , "generics"].join(" ")} id="projects">
       <div className={[styles.projSection, styles.section].join(' ')}>
         <Title className={styles.title}>Projects</Title>
         <Grid className={styles.projectsBox}>
           <Grid.Column>
         {
             myProjects.map((item, index) => (
-                <BoxFromTop className={styles.project} key={index} delayProp={0}>
+                <BoxFromTop className={[styles.project, "card"].join(" ")} key={index} delayProp={0}>
                   <Grid>
                     <Grid.Row>
                       <Grid.Column className={styles.projImgBox} computer={10} widescreen={10} largeScreen={10} tablet={16} mobile={16}>
@@ -38,7 +38,9 @@ export const Projects = () => {
                         <div className={styles.projTags}>
                           {
                             item.tags.map((tag, i) => (         
-                              <span key={i} className={styles.projTag}>{tag}</span>
+                              <span key={i} className={[styles.projTag, "smCard"].join(" ")}>
+                                {tag}
+                              </span>
                             ))
                           }
                         </div>
@@ -61,12 +63,12 @@ export const Projects = () => {
                           {
                               item.gitLink === ''? (
                                 <Popup
-                                  trigger={<p className={[styles.projGit, styles.disabled].join(' ')} href={item.gitLink}><FiGithub/></p>}
+                                  trigger={<p className={[styles.projGit, styles.disabled].join(' ')}><FiGithub/></p>}
                                   content='Github repository is privated for security purposes'
                                   inverted
                                 />
                               ):(
-                                <a className={styles.projGit} href={item.gitLink} target='_blank'><FiGithub/></a>
+                                <a className={[styles.projGit, "darkedLink"].join(" ")} href={item.gitLink} target='_blank'><FiGithub/></a>
                               )
                             }
                           </motion.div>

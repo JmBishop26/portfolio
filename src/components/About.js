@@ -25,12 +25,12 @@ export const About = () => {
 
 
   return (
-    <Container as="section" className={styles.aboutCont} id="about">
+    <Container as="section" className={[styles.aboutCont, "generics"].join(" ")} id="about">
       <div className={[styles.about, styles.section].join(' ')}>
           <Title className={styles.title} >About</Title>
         <Grid className={styles.abtSection}>
             <Grid.Column computer={12} tablet={16} mobile={16}>
-              <FadeInBox className={styles.abtBox} delayProp={0.3}>
+              <FadeInBox className={[styles.abtBox, "card"].join(" ")} delayProp={0.3}>
                 <h2 className={styles.abtHead}>Who Am I?</h2>
                 <Accordion className={styles.accAbout} panels={panels}/>
                 <div>
@@ -45,8 +45,8 @@ export const About = () => {
               </DivFromRight>
             </Grid.Column>
         </Grid>
-        <AboutSections sectionClass={styles.interestSection} sectionTitle="Interests" sectionTitleClass={styles.abtHead} gridClass={styles.abtGrid} data={myInterests} columnClass={styles.abtGridCols} perObjectClass={styles.interest} iconClass={styles.intIcon} textClass={styles.intName}/>
-        <AboutSections sectionClass={styles.skillSection} sectionTitle="Skills" sectionTitleClass={styles.abtHead} gridClass={styles.skillGrid} data={mySkills} columnClass={styles.skillGridCols} perObjectClass={styles.skill} iconClass={styles.intIcon} textClass={styles.intName}/>
+        <AboutSections sectionClass={styles.interestSection} sectionTitle="Interests" sectionTitleClass={styles.abtHead} gridClass={styles.abtGrid} data={myInterests} columnClass={styles.abtGridCols} perObjectClass={[styles.interest, "smCard"].join(" ")} iconClass={styles.intIcon} textClass={styles.intName}/>
+        <AboutSections sectionClass={styles.skillSection} sectionTitle="Skills" sectionTitleClass={styles.abtHead} gridClass={styles.skillGrid} data={mySkills} columnClass={styles.skillGridCols} perObjectClass={[styles.skill, "smCard"].join(" ")} iconClass={styles.intIcon} textClass={styles.intName}/>
 
       </div>
     </Container>

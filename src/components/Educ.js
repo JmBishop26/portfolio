@@ -8,17 +8,17 @@ export const Educ=()=> {
 
     return (
     <>
-        <Container as="section" id="education" className={styles.educSectionCont}>
+        <Container as="section" id="education" className={[styles.educSectionCont, "generics"].join(" ")}>
             <div className={styles.educSection}>
                 <Title className={styles.title}>Education</Title>
                 <Grid className={styles.educBox}>
-                        <Grid.Column className={styles.timeline}>
+                        <Grid.Column className={[styles.timeline, "line"].join(" ")}>
                             {
                                 education.map((item, index)=>(
-                                    <div className={styles.educItems} key={index}>
+                                    <div className={[styles.educItems, "circle"].join(" ")} key={index}>
                                         <h2>{item.degree}</h2>
                                         <DivFromRight>
-                                            <Card className={styles.educCard}>
+                                            <Card className={[styles.educCard, "card"].join(" ")}>
                                                 <Card.Content>
                                                     <Card.Header><h3>{item.school}</h3></Card.Header>
                                                     <Card.Meta><span>{item.loc}</span></Card.Meta>
