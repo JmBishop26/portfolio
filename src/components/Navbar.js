@@ -25,17 +25,6 @@ export const Navbar = ({toggleSidebar}) => {
     setTheme(!isDark)
   }
 
-console.log(typeof(isDark))
-console.log(isDark)
-
-
-  // if(){
-  //   console.log("true")
-  // }else{
-  //   console.log("false")
-  // }
-
-
   return (
     <Grid className={[styles.navCont, "generics"].join(" ")} container columns={2}>
       <Grid.Row className={[styles.navbar, styles.section].join(' ')}>
