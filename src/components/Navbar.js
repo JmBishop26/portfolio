@@ -80,7 +80,7 @@ console.log(isDark)
             initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2, type: 'tween', duration:0.2} }}
           >
             <Button className={styles.sideToggler} onClick={toggleSidebar}>
-              <p><FiMenu size={'3rem'} /></p>
+              <p><FiMenu size={'2rem'} /></p>
             </Button>
           </motion.div>
         </Grid.Column>
