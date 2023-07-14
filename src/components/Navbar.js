@@ -64,7 +64,7 @@ export const Navbar = ({toggleSidebar}) => {
 
           </motion.div>
         </Grid.Column>
-        <Grid.Column textAlign='right' verticalAlign='top' tablet={6} className={styles.sideTogglerCol}>
+        <Grid.Column textAlign='right' verticalAlign='middle' tablet={6} className={styles.sideTogglerCol}>
           <motion.div
             initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2, type: 'tween', duration:0.2} }}
           >
